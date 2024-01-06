@@ -66,7 +66,7 @@ export async function BuyCourse(
 
     // Opening the Razorpay SDK
     const options = {
-      key: "rzp_test_f0IGLxlDsQvd9E",
+      key: "process.env.PAYMENT_KEY",
       currency: orderResponse.data.data.currency,
       amount: `${orderResponse.data.data.amount}`,
       order_id: orderResponse.data.data.id,
