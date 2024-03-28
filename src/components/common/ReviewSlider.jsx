@@ -41,7 +41,7 @@ const ReviewSlider = () => {
                 disableOnInteraction:false,
               }}
               modules={[FreeMode, Pagination, Autoplay]}
-              className='w-full'
+              className='w-[100vw]'
               >
                {reviews.map((review,i) => {
                 return(
@@ -55,7 +55,7 @@ const ReviewSlider = () => {
                                      :`https://api.dicebear.com/5.x/initials/svg?seed=${review?.user?.firstName} ${review?.user?.lastName}`
                                   }
                                   alt=''
-                                  className='h-9 w-9 rounded-full object-cover'
+                                  className='h-9 rounded-full object-cover'
                                   />
                                   <div>
                                     <h1 className='font-semibold text-richblack-5'>

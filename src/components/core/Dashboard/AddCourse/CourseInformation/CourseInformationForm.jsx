@@ -189,10 +189,10 @@ export default function CourseInformationForm() {
           Course Short Description <sup className="text-pink-200">*</sup>
         </label>
         <textarea
-          id="courseShortDesc"
+          id="courseShortDesc"  
           placeholder="Enter Description"
           {...register("courseShortDesc", { required: true })}
-          className="form-style resize-x-none min-h-[130px] w-full text-black"
+          className="form-style resize-x-none min-h-[130px] w-full text-white"
         />
         {errors.courseShortDesc && (
           <span className="ml-2 text-xs tracking-wide text-pink-200">
@@ -216,7 +216,7 @@ export default function CourseInformationForm() {
                 value: /^(0|[1-9]\d*)(\.\d+)?$/,
               },
             })}
-            className="form-style w-full !pl-12 text-black"
+            className="form-style w-full !pl-12 text-white"
           />
           <HiOutlineCurrencyRupee className="absolute left-3 top-1/2 inline-block -translate-y-1/2 text-2xl text-richblack-400" />
         </div>
@@ -242,8 +242,8 @@ export default function CourseInformationForm() {
           </option>
           {!loading &&
             courseCategories?.map((category, indx) => (
-              <option key={indx} value={category?._id} className="text-black">
-                {category?.name}
+              <option key={indx} value={category?._id} className="text-white">
+               <div className="text-white"> {category?.name}</div>
               </option>
             ))}
         </select>
@@ -283,7 +283,7 @@ export default function CourseInformationForm() {
           id="courseBenefits"
           placeholder="Enter benefits of the course"
           {...register("courseBenefits", { required: true })}
-          className="form-style resize-x-none min-h-[130px] w-full text-black"
+          className="form-style resize-x-none min-h-[130px] w-full text-white"
         />
         {errors.courseBenefits && (
           <span className="ml-2 text-xs tracking-wide text-pink-200">

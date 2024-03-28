@@ -88,16 +88,16 @@ const CourseDetails = () => {
     courseName,
     courseDescription,
     thumbnail,
-    price,
     whatYouWillLearn,
+    price,
     courseContent,
     ratingAndReviews,
     instructor,
     studentsEnrolled,
     createdAt,
   } = response.data?.courseDetails
-  
-  
+
+  const courseData = response.data?.courseDetails;
   const handleBuyCourse = () => {
     if (token) {
       BuyCourse(token, [courseId], user, navigate, dispatch)
@@ -169,7 +169,7 @@ const CourseDetails = () => {
             </div>
             <div className="flex w-full flex-col gap-4 border-y border-y-richblack-500 py-4 lg:hidden">
               <p className="space-x-3 pb-4 text-3xl font-semibold text-richblack-5">
-                Rs. {price}
+                Rs.{price}
               </p>
               <button className="yellowButton" onClick={handleBuyCourse}>
                 Buy Now
@@ -180,7 +180,8 @@ const CourseDetails = () => {
           {/* Course Card */}
           <div className="right-[1rem] top-[60px] mx-auto hidden min-h-[600px] w-1/3 max-w-[410px] translate-y-24 md:translate-y-0 lg:absolute  lg:block">
             <CourseDetailsCard 
-              //course={response?.data?.courseDetails}
+              // course={response.data?.courseDetails}
+              course={courseData}
               setConfirmationModal = {setConfirmationModal}
               handleBuyCourse={handleBuyCourse}
           
