@@ -28,6 +28,7 @@ import CourseDetails from "./pages/CourseDetails"
 import ViewCourse from "./pages/ViewCourse";
 import videoDetails from "./components/core/ViewCourse/VideoDetails"
 import Instructor from "./components/core/Dashboard/Instructor";
+import VideoDetails from "./components/core/ViewCourse/VideoDetails";
 
 function App() {
 
@@ -151,7 +152,7 @@ function App() {
             
             <Route 
              path="view-course/:courseId/section/:sectionId/sub-section/:subSectionId"
-             element={<videoDetails/>}/>
+             element={<VideoDetails/>}/>
           </>
         )}
       </Route>

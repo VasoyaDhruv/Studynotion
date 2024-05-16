@@ -85,7 +85,7 @@ exports.signup = async (req, res) => {
 			dateOfBirth: null,
 			about: null,
 			contactNumber: null,
-		});
+		}); 
 		const user = await User.create({
 			firstName,
 			lastName,

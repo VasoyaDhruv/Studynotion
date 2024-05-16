@@ -46,5 +46,5 @@ export default function ViewCourse() {
       </div>
       {reviewModal && <CourseReviewModal setReviewModal={setReviewModal} />}
     </>
-  )
+  ) 
 }
