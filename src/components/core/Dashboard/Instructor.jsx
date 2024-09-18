@@ -74,7 +74,7 @@ const Instructor = () => {
                     </div>
                 </div>
             </div>
-            <div className='rounded-md bg-richblue-800 p-6'>
+            <div className='rounded-md bg-richblue-800 p-6 max-w-[30rem] overflow-x-auto'>
                 {/* Render 3 courses */}
                 <div className='flex items-center justify-between'>
                     <p className='text-lg font-bold text-richblack-5'>Your Courses</p>
@@ -85,9 +85,9 @@ const Instructor = () => {
                 <div className='my-4 flex items-start space-x-6'>
                    {
                     courses.slice(0,3).map((course) => (
-                        <div key={course._id} className='w-1/3'>
+                        <div key={course._id} className=''>
                            <img src={course.thumbnail} alt="" 
-                           className='h-[201px] w-full rounded-md object-cover'/>
+                           className='h-[201px] w-[18rem] rounded-md object-cover'/>
                            <div className='mt-3 w-full'>
                              <p className='text-sm font-medium text-richblack-50'>{course.courseName}</p>
                              <div className='mt-1 flex items-center space-x-2'>

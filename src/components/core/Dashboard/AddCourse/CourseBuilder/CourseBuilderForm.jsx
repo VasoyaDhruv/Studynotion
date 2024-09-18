@@ -93,13 +93,13 @@ const CourseBuilderForm = () => {
     <div>
       <p>Course Builder</p>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
+        <div className='mt-3 '>
           <label htmlFor='sectionName'>Section Name<sup>*</sup></label>
           <input
             id='sectionName'
             placeholder='Add Section Name'
             {...register("sectionName",{required:true})}
-            className='w-full text-black'/>
+            className='w-full text-black p-2 mt-2'/>
             {errors.sectionName && (
               <span>Section Name is required</span>
             )}
