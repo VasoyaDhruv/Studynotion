@@ -1,5 +1,5 @@
 // const BASE_URL = process.env.REACT_APP_BASE_URL
- const BASE_URL = "https://studynotion-f9sq.onrender.com/api/v1"
+ const BASE_URL = process.env.REACT_APP_BASE_URL ?? "https://studynotion-f9sq.onrender.com/api/v1"
 
 // AUTH ENDPOINTStriny
 export const endpoints = {
