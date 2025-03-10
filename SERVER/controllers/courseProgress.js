@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 const Section = require("../models/Section")
-const SubSection = require("../models/Subsection")
+const Subsection = require("../models/Subsection");
 const CourseProgress = require("../models/CourseProgress")
 const Course = require("../models/Course")
 
@@ -10,7 +10,7 @@ exports.updateCourseProgress = async (req, res) => {
 
   try {
     // Check if the subsection is valid
-    const subsection = await SubSection.findById(subsectionId)
+    const subsection = await Subsection.findById(subsectionId)
     if (!subsection) {
       return res.status(404).json({ error: "Invalid subsection" })
     }
